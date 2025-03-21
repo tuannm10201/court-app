@@ -1,0 +1,32 @@
+$header-padding: 19.21px;
+.header {
+  padding: $header-padding 0;
+  .login-register-btn {
+    font-size: 14px;
+    line-height: 1.5;
+    letter-spacing: -0.012em;
+    height: 40px;
+  }
+  .toggler-btn {
+    padding-right: 0;
+    .navbar-toggler-icon {
+      width: 24px;
+      height: 24px;
+    }
+    &:focus {
+      box-shadow: none;
+    }
+  }
+
+  .nav-link {
+    @include min-width($lg) {
+      border-bottom: none !important;
+    }
+  }
+
+  &.open + .main-content {
+    @include max-width($lg) {
+      display: none;
+    }
+  }
+}

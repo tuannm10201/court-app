@@ -1,0 +1,55 @@
+.login-register-modal {
+  .modal-dialog {
+    max-width: 800px;
+  }
+
+  .btn-close {
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+  }
+
+  @include min-width($lg) {
+    .modal-content {
+      border-radius: 24px;
+      padding: 0 64px;
+    }
+  }
+  .modal-title {
+    width: 100%;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 124%;
+    letter-spacing: -0.03em;
+    text-align: center;
+  }
+
+  .modal-body {
+    form {
+      @include min-width($lg) {
+        width: 552px;
+      }
+      width: 100%;
+    }
+    input:not([type='checkbox']) {
+      border-radius: 12px;
+      padding: 11px 14px;
+    }
+    input[type='checkbox'] {
+      border-radius: 5px;
+      margin-top: 1px;
+      margin-right: 0.5rem;
+      width: 20px;
+      height: 20px;
+
+      &:checked {
+        border: none;
+      }
+    }
+  }
+
+  .google-login-btn {
+    background-color: rgba(250, 250, 250, 1);
+    color: $text-color;
+  }
+}
