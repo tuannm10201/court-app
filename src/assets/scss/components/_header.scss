@@ -1,6 +1,6 @@
-$header-padding: 19.21px;
 .header {
-  padding: $header-padding 0;
+  padding: 19.21px 0;
+
   .login-register-btn {
     font-size: 14px;
     line-height: 1.5;
@@ -24,9 +24,18 @@ $header-padding: 19.21px;
     }
   }
 
-  &.open + .main-content {
+  &.open {
     @include max-width($lg) {
-      display: none;
+      height: 100vh;
+      > .container {
+        margin-bottom: auto;
+      }
     }
+  }
+}
+
+body:has(.header.open) {
+  @include max-width($lg) {
+    overflow: hidden;
   }
 }

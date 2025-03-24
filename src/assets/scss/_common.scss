@@ -7,3 +7,27 @@
 .color-green {
   color: $green;
 }
+
+input:focus {
+  box-shadow: none !important;
+}
+.rounded-12 {
+  border-radius: 12px;
+}
+.rounded-24 {
+  border-radius: 24px;
+}
+.bg-gray {
+  background: $gray;
+}
+.fs-sm {
+  font-size: 14px;
+}
+.fs-md {
+  font-size: 18px;
+}
+.bg-icon {
+  position: absolute;
+  user-select: none;
+  pointer-events: none;
+}

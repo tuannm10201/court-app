@@ -1,0 +1,54 @@
+.filter-input {
+  border: 1px solid rgba(226, 226, 226, 1);
+  height: 48px;
+
+  .submit-change-btn {
+    padding: 0 12px;
+    height: 24px;
+  }
+}
+
+@include min-width($sm) {
+  .location-input {
+    width: 300px;
+  }
+  .date-input {
+    width: 200px;
+  }
+}
+@include max-width($sm) {
+  .location-input {
+    flex: 3;
+  }
+  .date-input {
+    flex: 2;
+  }
+}
+
+.location-dropdown {
+  width: calc(100% + 1.5rem);
+  border: 1px solid rgba(226, 226, 226, 1);
+
+  .location-icon {
+    color: $green;
+    font-size: 20px;
+  }
+}
+
+.filter.bg-primary {
+  .filter-input {
+    background-color: #2767d4 !important;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    input,
+    .input-group-text {
+      color: white !important;
+      background-color: #2767d4 !important;
+    }
+
+    .submit-change-btn {
+      background-color: #467ddb;
+      color: white !important;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+  }
+}

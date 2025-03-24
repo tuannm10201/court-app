@@ -1,0 +1,29 @@
+.find-player-card {
+  min-width: 220px;
+  width: calc(25vw - 1rem);
+  max-width: 320px;
+  @include min-width($lg) {
+    min-width: 300px;
+  }
+
+  .find-player-card-img {
+    height: 300px;
+  }
+
+  .available {
+    background-color: rgba(235, 245, 238, 1) !important;
+    color: rgba(30, 87, 47, 1);
+  }
+  .unavailable {
+    background-color: rgba(255, 250, 250, 1) !important;
+    color: rgba(80, 12, 10, 1);
+  }
+
+  .text-gray {
+    color: rgba(92, 95, 97, 1);
+  }
+
+  button {
+    border: 1px solid rgba(226, 226, 226, 1);
+  }
+}

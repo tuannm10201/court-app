@@ -1,0 +1,49 @@
+.subscribe-banner {
+  margin-top: 5rem;
+  height: 400px;
+  background: url('/src/assets/images/subscribe-banner-bg.jpeg') no-repeat center;
+  background-size: cover;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+  .overlay {
+    background-color: rgba(0, 76, 206, 0.4);
+    backdrop-filter: blur(20px);
+
+    .texture {
+      background-image: url('/src/assets/images/subscribe-banner-texture.svg');
+      background-size: cover;
+      background-blend-mode: soft-light;
+      opacity: 0.4;
+    }
+  }
+
+  @include min-width($xl) {
+    .subscribe-title {
+      font-size: 48px;
+    }
+  }
+  .subscribe-subtext {
+    color: rgba(240, 243, 250, 1);
+  }
+
+  .subscription-container {
+    border-radius: 50px;
+    max-width: 400px;
+  }
+
+  .input-field {
+    max-width: 300px;
+    padding: 12px 1rem;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(24px);
+    &::placeholder {
+      color: inherit;
+    }
+  }
+
+  .subscribe-button {
+    padding: 12px 1rem;
+  }
+}

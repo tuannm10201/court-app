@@ -1,0 +1,46 @@
+.open-play-card {
+  min-width: 220px;
+  width: calc(25vw - 1rem);
+  max-width: 320px;
+  @include min-width($lg) {
+    min-width: 300px;
+  }
+
+  .open-play-badge {
+    top: 1.2rem;
+    left: 1rem;
+  }
+  .overlay {
+    background: linear-gradient(180deg, rgba(12, 16, 19, 0) 0%, rgba(12, 16, 19, 0.6) 30.02%);
+    height: 246px;
+    .dot {
+      font-size: 5px;
+    }
+    .join-now-btn {
+      border: 1px solid rgba(226, 226, 226, 1);
+    }
+  }
+}
+
+.avatar-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.avatar-item {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(4px);
+  position: absolute;
+  overflow: hidden;
+  border-radius: 50%;
+
+  &.extra {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    width: 24px;
+    height: 24px;
+  }
+}

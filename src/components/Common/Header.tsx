@@ -2,8 +2,9 @@ import { Button, Collapse, Nav, Navbar, NavbarToggler, NavItem } from 'reactstra
 import logo from '../../assets/images/logo.svg';
 import headerClose from '../../assets/images/header-close.svg';
 import { NavLink } from 'react-router';
-import LoginOrRegiserModal from './LoginOrRegiserModal';
-import { useState } from 'react';
+import { lazy, useState } from 'react';
+
+const LoginOrRegiserModal = lazy(() => import('../Home/LoginOrRegiserModal'));
 
 type Props = {};
 
@@ -21,8 +22,10 @@ export default function Header({}: Props) {
   return (
     <>
       <Navbar
+        sticky="top"
         className={
-          'header d-flex justify-content-center align-items-center' + (isOpen ? ' open' : '')
+          'header d-flex justify-content-center align-items-center bg-white' +
+          (isOpen ? ' open' : '')
         }
         expand="lg"
         container
@@ -73,7 +76,7 @@ export default function Header({}: Props) {
         </Collapse>
       </Navbar>
 
-      <LoginOrRegiserModal modal={modal} toggleModal={toggleModal} />
+      {modal && <LoginOrRegiserModal modal={modal} toggleModal={toggleModal} />}
     </>
   );
 }
