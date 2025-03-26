@@ -1,6 +1,6 @@
 .hot-deals-container {
   .cta-banner-card {
-    background-color: rgba(55, 159, 86, 1);
+    background-color: $green;
     background-image: url('/src/assets/images/cta-banner-texture.svg');
     background-size: cover;
     background-blend-mode: soft-light;
@@ -109,11 +109,11 @@
   .pagination-dot {
     width: 25px;
     height: 6px;
-    background-color: rgba(226, 226, 226, 1);
+    background-color: $light-gray;
     transition: width 0.3s ease, background-color 0.3s ease;
     &.active {
       width: 40px;
-      background-color: $green;
+      background-color: $light-green;
     }
   }
 }

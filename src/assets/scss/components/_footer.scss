@@ -2,16 +2,11 @@ footer {
   margin-top: 5rem;
   background-color: $gray;
 
-  .nav-link {
-    color: rgba(92, 95, 97, 1);
-  }
-
   hr {
-    color: rgba(226, 226, 226, 1);
+    color: $light-gray;
   }
 
   .social-btn {
-    border: 1px solid rgba(226, 226, 226, 1);
     width: 48px;
     height: 48px;
   }

@@ -1,9 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
 import apiSlice from './apiSlice';
+import onboardingSlice from './onboardingSlice';
 
-export default configureStore({
+const store = configureStore({
   reducer: {
     api: apiSlice.reducer,
+    onboarding: onboardingSlice,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
@@ -11,3 +13,8 @@ export default configureStore({
       serializableCheck: false,
     }).concat(apiSlice.middleware),
 });
+
+export type RootState = ReturnType<typeof store.getState>;
+export type AppDispatch = typeof store.dispatch;
+
+export default store;

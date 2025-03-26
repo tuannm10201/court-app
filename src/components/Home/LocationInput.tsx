@@ -48,7 +48,7 @@ export default function LocationInput({}: Props) {
       </InputGroup>
 
       <Dropdown isOpen={isOpen} toggle={() => setIsOpen(!isOpen)}>
-        <DropdownMenu className="location-dropdown rounded-12 mt-2">
+        <DropdownMenu className="location-dropdown border-light-gray rounded-12 mt-2">
           <DropdownItem className="fw-semibold d-flex justify-content-between align-items-center">
             <span> Use your current location</span>
             <i className="bi bi-crosshair location-icon"></i>

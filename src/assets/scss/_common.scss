@@ -1,3 +1,21 @@
+html {
+  overflow-x: hidden;
+}
+body {
+  font-family: 'Manrope', sans-serif !important;
+  font-weight: 400;
+  overflow-x: hidden;
+  height: 100vh;
+}
+#root {
+  height: 100%;
+}
+.container {
+  @include min-width($xxl) {
+    max-width: calc(1352px + var(--bs-gutter-x));
+  }
+}
+
 .fs-5-5 {
   font-size: 1.125rem;
 }
@@ -5,9 +23,11 @@
   color: $text-color;
 }
 .color-green {
-  color: $green;
+  color: $light-green;
 }
-
+.color-dark-gray {
+  color: $dark-gray;
+}
 input:focus {
   box-shadow: none !important;
 }
@@ -30,4 +50,7 @@ input:focus {
   position: absolute;
   user-select: none;
   pointer-events: none;
+}
+.border-light-gray {
+  border: 1px solid $light-gray !important;
 }

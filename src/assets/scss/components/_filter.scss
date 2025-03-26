@@ -1,5 +1,5 @@
 .filter-input {
-  border: 1px solid rgba(226, 226, 226, 1);
+  border: 1px solid $light-gray;
   height: 48px;
 
   .submit-change-btn {
@@ -27,10 +27,9 @@
 
 .location-dropdown {
   width: calc(100% + 1.5rem);
-  border: 1px solid rgba(226, 226, 226, 1);
 
   .location-icon {
-    color: $green;
+    color: $light-green;
     font-size: 20px;
   }
 }

@@ -3,7 +3,7 @@ import { lazy } from 'react';
 
 import Home from '../pages/Home';
 
-const Dashboard = lazy(() => import('../pages/Dashboard'));
+const Onboarding = lazy(() => import('../pages/Onboarding'));
 const NotFound = lazy(() => import('../pages/NotFound'));
 
 const routes: RouteObject[] = [
@@ -12,8 +12,8 @@ const routes: RouteObject[] = [
     element: <Home />,
   },
   {
-    path: '/dashboard',
-    element: <Dashboard />,
+    path: '/onboarding',
+    element: <Onboarding />,
   },
   { path: '*', element: <NotFound /> },
 ];

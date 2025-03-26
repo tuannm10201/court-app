@@ -1,0 +1,195 @@
+.onboarding-container {
+  .onboarding-setup-col {
+    max-height: 934px;
+    height: calc(100vh - 48px);
+    @include max-width($lg) {
+      height: 100%;
+    }
+  }
+  .onboarding-img {
+    min-height: 700px;
+    height: calc(100vh - 48px);
+    max-height: 934px;
+  }
+
+  .progress-bar {
+    width: 48px;
+    @include max-width($lg) {
+      width: 100%;
+    }
+    height: 4px;
+    background-color: rgba(241, 241, 241, 1);
+
+    &.active {
+      background-color: $green;
+    }
+  }
+
+  .pw-input {
+    border-right: none;
+  }
+
+  .sport-select-btn.text-white {
+    background-color: $green;
+  }
+
+  .input-group {
+    .form-control.is-invalid {
+      background-image: none;
+      & + .input-group-text {
+        border-color: #dc3545; // Matching red border for error state
+      }
+    }
+
+    &:focus-within .input-group-text {
+      border-color: #86b7fe;
+    }
+  }
+
+  .skill-level-range-input {
+    output {
+      background-color: $green;
+      transform: translateX(-50%);
+      bottom: calc(100% + 5px);
+      height: 24px;
+    }
+    output::after {
+      content: '';
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      border-radius: 50px;
+      background-color: $green;
+      bottom: -4px;
+      left: 50%;
+      box-shadow: 0px 0px 24px 1px rgba(146, 146, 146, 0.25);
+      transform: translateX(-50%);
+    }
+
+    input {
+      -webkit-appearance: none;
+      width: 100%;
+      height: 8px;
+      background: transparent;
+      border-radius: 5px;
+      outline: none;
+      cursor: pointer;
+
+      --progress: calc(100% / 7);
+
+      &::-webkit-slider-runnable-track {
+        width: 100%;
+        height: 8px;
+        background: linear-gradient(to right, $green var(--progress), #ccc var(--progress));
+        border-radius: 5px;
+      }
+
+      &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: white;
+        box-shadow: 0px 0px 24px 1px rgba(146, 146, 146, 0.25);
+        margin-top: -6px;
+      }
+
+      &::-moz-range-track {
+        width: 100%;
+        height: 8px;
+        background: linear-gradient(to right, $green var(--progress), #ccc var(--progress));
+        border-radius: 5px;
+      }
+
+      &::-moz-range-thumb {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: white;
+        box-shadow: 0px 0px 24px 1px rgba(146, 146, 146, 0.25);
+      }
+    }
+  }
+
+  .onboarding-btn-container {
+    @include max-width($lg) {
+      width: 100%;
+      button {
+        width: 100%;
+      }
+    }
+  }
+
+  .success-container {
+    height: 350px;
+
+    .success-circle {
+      position: absolute;
+      width: 140px;
+      height: 140px;
+      background-color: #4caf50; /* Green */
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .inner-circle {
+        width: 64px;
+        height: 64px;
+        background-color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .check-icon {
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+
+    .wave {
+      position: absolute;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: linear-gradient(
+        135deg,
+        rgba(55, 159, 86, 0) 0%,
+        #379f56 50%,
+        rgba(55, 159, 86, 0) 100%
+      );
+      animation: wave-animation 2s infinite;
+      -webkit-mask-image: radial-gradient(circle, transparent 49%, black 49.5%, transparent 50%);
+      mask-image: radial-gradient(circle, transparent 49%, black 49.5%, transparent 50%);
+
+      &.delay-1 {
+        animation-delay: 0.2s;
+      }
+      &.delay-2 {
+        animation-delay: 0.4s;
+      }
+      &.delay-3 {
+        animation-delay: 0.6s;
+      }
+      &.delay-4 {
+        animation-delay: 0.8s;
+      }
+      &.delay-5 {
+        animation-delay: 1s;
+      }
+    }
+
+    @keyframes wave-animation {
+      0% {
+        transform: scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: scale(3);
+        opacity: 0;
+      }
+    }
+  }
+}

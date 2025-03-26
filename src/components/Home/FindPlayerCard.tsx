@@ -35,15 +35,18 @@ export default function FindPlayerCard({ className, available }: Props) {
       </Badge>
 
       <div className="fw-semibold fs-5">James R.</div>
-      <div className="text-gray">123 Beach Ave, Miami, FL</div>
-      <div className="d-flex gap-2 text-gray">
+      <div className="color-dark-gray">123 Beach Ave, Miami, FL</div>
+      <div className="d-flex gap-2 color-dark-gray">
         <img src={cellSignalIcon} alt="" />
         Beginner
         <img src={tennisBallIcon} alt="" className="ms-2" />
         Tennis
       </div>
 
-      <Button outline className="rounded-pill bg-green fw-semibold w-100 text-black mt-2">
+      <Button
+        outline
+        className="rounded-pill bg-green border-light-gray fw-semibold w-100 text-black mt-2"
+      >
         View Profile
       </Button>
     </Card>

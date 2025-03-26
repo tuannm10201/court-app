@@ -61,7 +61,7 @@ export default function LoginOrRegiserModal({ modal, toggleModal }: Props) {
             Log In with Google
           </Button>
         </Form>
-        <p className="text-center mt-3" style={{ color: 'rgba(92, 95, 97, 1)' }}>
+        <p className="text-center mt-3 color-dark-gray">
           Don't have an account?
           <NavLink className="color-green ms-2 text-decoration-none fw-semibold" to="/">
             Sign Up

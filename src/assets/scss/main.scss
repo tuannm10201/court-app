@@ -26,28 +26,13 @@
 @import 'bootstrap';
 @import './mixin';
 
-html {
-  overflow-x: hidden;
-}
-
-body {
-  font-family: 'Manrope', sans-serif !important;
-  font-weight: 400;
-  overflow-x: hidden;
-  height: 100vh;
-}
-.container {
-  @include min-width($xxl) {
-    max-width: calc(1352px + var(--bs-gutter-x));
-  }
-}
-
 @import './common';
 @import './components/filter';
 @import './components/hot-deals';
 @import './components/open-play';
 @import './components/find-player';
 @import './components/subscribe-banner';
+@import './components/onboarding';
 @import './components/header';
 @import './components/footer';
 @import './components/modal';

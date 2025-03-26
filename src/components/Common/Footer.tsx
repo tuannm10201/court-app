@@ -13,22 +13,22 @@ export default function Footer({}: Props) {
             <h6 className="fw-semibold mb-0">Company</h6>
             <ul className="list-unstyled mt-4">
               <li>
-                <NavLink className="nav-link mt-3" to="/">
+                <NavLink className="nav-link color-dark-gray mt-3" to="/">
                   About Us
                 </NavLink>
               </li>
               <li>
-                <NavLink className="nav-link mt-3" to="/">
+                <NavLink className="nav-link color-dark-gray mt-3" to="/">
                   Careers
                 </NavLink>
               </li>
               <li>
-                <NavLink className="nav-link mt-3" to="/">
+                <NavLink className="nav-link color-dark-gray mt-3" to="/">
                   Gift Cards
                 </NavLink>
               </li>
               <li>
-                <NavLink className="nav-link mt-3" to="/">
+                <NavLink className="nav-link color-dark-gray mt-3" to="/">
                   Rewards
                 </NavLink>
               </li>
@@ -38,17 +38,17 @@ export default function Footer({}: Props) {
             <h6 className="fw-semibold mb-0">Businesses</h6>
             <ul className="list-unstyled mt-4">
               <li>
-                <NavLink className="nav-link mt-3" to="/">
+                <NavLink className="nav-link color-dark-gray mt-3" to="/">
                   Clubs
                 </NavLink>
               </li>
               <li>
-                <NavLink className="nav-link mt-3" to="/">
+                <NavLink className="nav-link color-dark-gray mt-3" to="/">
                   Book Court
                 </NavLink>
               </li>
               <li>
-                <NavLink className="nav-link mt-3" to="/">
+                <NavLink className="nav-link color-dark-gray mt-3" to="/">
                   Facilities
                 </NavLink>
               </li>
@@ -58,12 +58,12 @@ export default function Footer({}: Props) {
             <h6 className="fw-semibold mb-0">Resources</h6>
             <ul className="list-unstyled mt-4">
               <li>
-                <NavLink className="nav-link mt-3" to="/">
+                <NavLink className="nav-link color-dark-gray mt-3" to="/">
                   Blog
                 </NavLink>
               </li>
               <li>
-                <NavLink className="nav-link mt-3" to="/">
+                <NavLink className="nav-link color-dark-gray mt-3" to="/">
                   Case Studies
                 </NavLink>
               </li>
@@ -73,12 +73,12 @@ export default function Footer({}: Props) {
             <h6 className="fw-semibold mb-0">Legal</h6>
             <ul className="list-unstyled mt-4">
               <li>
-                <NavLink className="nav-link mt-3" to="/">
+                <NavLink className="nav-link color-dark-gray mt-3" to="/">
                   Privacy Policy
                 </NavLink>
               </li>
               <li>
-                <NavLink className="nav-link mt-3" to="/">
+                <NavLink className="nav-link color-dark-gray mt-3" to="/">
                   Terms of Service
                 </NavLink>
               </li>
@@ -91,13 +91,13 @@ export default function Footer({}: Props) {
             <img src={logo} alt="CourtsApp" className="logo" />
           </NavLink>
           <div className="d-flex gap-2">
-            <Button outline className="social-btn rounded-circle">
+            <Button outline className="social-btn border-light-gray rounded-circle">
               <i className="bi bi-instagram fs-5" />
             </Button>
-            <Button outline className="social-btn rounded-circle">
+            <Button outline className="social-btn border-light-gray rounded-circle">
               <i className="bi bi-twitter-x fs-5" />
             </Button>
-            <Button outline className="social-btn rounded-circle">
+            <Button outline className="social-btn border-light-gray rounded-circle">
               <i className="bi bi-youtube fs-5" />
             </Button>
           </div>

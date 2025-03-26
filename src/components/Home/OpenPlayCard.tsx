@@ -55,7 +55,7 @@ export default function OpenPlayCard({ className }: Props) {
 
         <Button
           outline
-          className="join-now-btn fw-semibold rounded-pill bg-white text-black px-3 mt-4"
+          className="border-light-gray fw-semibold rounded-pill bg-white text-black px-3 mt-4"
         >
           Join Now
         </Button>
