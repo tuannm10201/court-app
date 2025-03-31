@@ -48,6 +48,7 @@
   .dropdown-menu {
     border: 1px solid rgba(255, 255, 255, 0.15);
     background-color: #2767d4;
+    transform: translate(0) !important;
     @include max-width($xl) {
       position: relative !important;
     }
