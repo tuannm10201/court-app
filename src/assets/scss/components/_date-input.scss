@@ -1,0 +1,105 @@
+.react-datepicker-wrapper {
+  width: 100%;
+}
+
+.date-picker {
+  background-color: #2767d4;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  font-size: 1rem;
+  font-weight: 500;
+  @include max-width($xl) {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .react-datepicker {
+    color: white;
+
+    &__header {
+      background-color: #2767d4;
+      border: none;
+      padding: 1rem 0 0;
+    }
+
+    &__current-month {
+      color: white;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    &__day {
+      width: 43px;
+      line-height: 36px;
+      height: 36px;
+      color: white;
+      @include max-width(400px) {
+        margin: 0;
+      }
+      &:not(.react-datepicker__day--selected):hover {
+        color: rgb(28.75, 93.2196969697, 143.75);
+        border-radius: 6px;
+      }
+
+      &-names {
+        margin-top: 10px;
+      }
+      &-name {
+        color: white;
+        width: 43px;
+        height: 30px;
+        font-size: 14px;
+        @include max-width(400px) {
+          margin: 0;
+        }
+      }
+      &--keyboard-selected,
+      &--selected {
+        background-color: rgba(255, 255, 255, 0.24);
+        outline: none;
+        font-weight: 600;
+        border-radius: 6px;
+      }
+      &--outside-month {
+        color: rgba(255, 255, 255, 0.5);
+      }
+    }
+
+    &__month-container {
+      @include max-width(400px) {
+        width: 100%;
+
+        .react-datepicker__month {
+          margin-left: 0;
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  .navigate-month-btn {
+    width: 28px;
+    border: none;
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.25);
+  }
+}
+
+.react-datepicker__triangle {
+  display: none;
+}
+
+.react-datepicker-popper {
+  z-index: 401;
+  @include max-width($xl) {
+    position: relative !important;
+    transform: translateX(-50%) !important;
+    left: 50% !important;
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: center;
+  }
+}

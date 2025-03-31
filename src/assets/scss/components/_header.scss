@@ -1,6 +1,12 @@
 .header {
   padding: 19.21px 0;
 
+  &.hide-on-sm {
+    @include max-width($xl) {
+      display: none !important;
+    }
+  }
+
   .login-register-btn {
     font-size: 14px;
     line-height: 1.5;

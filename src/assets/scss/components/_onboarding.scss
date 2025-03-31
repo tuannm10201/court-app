@@ -1,3 +1,9 @@
+#root:has(.onboarding-container) {
+  @include max-width($lg) {
+    height: 100%;
+  }
+}
+
 .onboarding-container {
   .onboarding-setup-col {
     max-height: 934px;

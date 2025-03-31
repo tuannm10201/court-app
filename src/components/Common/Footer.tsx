@@ -6,7 +6,7 @@ type Props = {};
 
 export default function Footer({}: Props) {
   return (
-    <footer className="py-4">
+    <footer className="py-2 py-lg-4">
       <Container className="mt-4 pb-2">
         <Row className="mb-4">
           <Col xs={6} md={3}>

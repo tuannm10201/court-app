@@ -27,7 +27,9 @@
 @import './mixin';
 
 @import './common';
+@import './components/map';
 @import './components/filter';
+@import './components/date-input';
 @import './components/hot-deals';
 @import './components/open-play';
 @import './components/find-player';
@@ -36,3 +38,6 @@
 @import './components/header';
 @import './components/footer';
 @import './components/modal';
+
+@import './pages/home';
+@import './pages/book-court';

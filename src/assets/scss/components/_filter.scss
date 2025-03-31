@@ -1,28 +1,37 @@
 .filter-input {
-  border: 1px solid $light-gray;
+  background-color: #2767d4 !important;
+  border: 1px solid rgba(255, 255, 255, 0.15);
   height: 48px;
 
+  input,
+  .input-group-text {
+    color: white !important;
+    background-color: #2767d4 !important;
+  }
   .submit-change-btn {
     padding: 0 12px;
     height: 24px;
+    background-color: #467ddb;
+    color: white !important;
+    border: 1px solid rgba(255, 255, 255, 0.15);
   }
 }
 
 @include min-width($sm) {
-  .location-input {
-    width: 300px;
-  }
-  .date-input {
-    width: 200px;
-  }
+  // .location-input {
+  //   width: 300px;
+  // }
+  // .date-input {
+  //   width: 200px;
+  // }
 }
 @include max-width($sm) {
-  .location-input {
-    flex: 3;
-  }
-  .date-input {
-    flex: 2;
-  }
+  // .location-input {
+  //   flex: 3;
+  // }
+  // .date-input {
+  //   flex: 2;
+  // }
 }
 
 .location-dropdown {
@@ -34,20 +43,30 @@
   }
 }
 
-.filter.bg-primary {
-  .filter-input {
-    background-color: #2767d4 !important;
+.multiple-select,
+.location-auto-complete {
+  .dropdown-menu {
     border: 1px solid rgba(255, 255, 255, 0.15);
-    input,
-    .input-group-text {
-      color: white !important;
-      background-color: #2767d4 !important;
+    background-color: #2767d4;
+    @include max-width($xl) {
+      position: relative !important;
     }
 
-    .submit-change-btn {
-      background-color: #467ddb;
-      color: white !important;
+    input {
+      border-radius: 5px;
+      width: 20px;
+      height: 20px;
       border: 1px solid rgba(255, 255, 255, 0.15);
+      background: rgba(255, 255, 255, 0.25);
+      &:checked {
+        background-image: url('/src/assets/images/input-checked.svg');
+      }
+    }
+
+    .dropdown-item:hover,
+    .dropdown-item:focus,
+    .selected {
+      background-color: rgba(255, 255, 255, 0.15);
     }
   }
 }

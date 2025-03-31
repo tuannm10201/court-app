@@ -1,10 +1,9 @@
 import { Button, Collapse, Nav, Navbar, NavbarToggler, NavItem } from 'reactstrap';
 import logo from '../../assets/images/logo.svg';
 import headerClose from '../../assets/images/header-close.svg';
-import { NavLink } from 'react-router';
-import { lazy, useState } from 'react';
-
-const LoginOrRegiserModal = lazy(() => import('../Home/LoginOrRegiserModal'));
+import { NavLink, useLocation } from 'react-router';
+import { useEffect, useState } from 'react';
+import LoginOrRegiserModal from './LoginOrRegiserModal';
 
 type Props = {};
 
@@ -17,7 +16,11 @@ export default function Header({}: Props) {
 
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggle = () => setIsOpen(!isOpen);
+  const { pathname } = useLocation();
+  const hideOnSm = pathname === '/book-court';
+  useEffect(() => {
+    if (isOpen) setIsOpen(false);
+  }, [pathname]);
 
   return (
     <>
@@ -25,7 +28,8 @@ export default function Header({}: Props) {
         sticky="top"
         className={
           'header d-flex justify-content-center align-items-center bg-white' +
-          (isOpen ? ' open' : '')
+          (isOpen ? ' open' : '') +
+          (hideOnSm ? ' hide-on-sm' : '')
         }
         expand="lg"
         container
@@ -34,14 +38,14 @@ export default function Header({}: Props) {
           <img src={logo} alt="CourtsApp" />
         </NavLink>
 
-        <NavbarToggler onClick={toggle} className="toggler-btn border-0">
+        <NavbarToggler onClick={() => setIsOpen(!isOpen)} className="toggler-btn border-0">
           {isOpen && <img src={headerClose} alt="X" />}
         </NavbarToggler>
 
         <Collapse isOpen={isOpen} navbar className="fullscreen-collapse">
           <Nav className="fs-6 fw-medium mx-auto mt-lg-0 mt-3 gap-lg-4 text-center" navbar>
             <NavItem>
-              <NavLink className="nav-link text-black py-lg-0 py-4 border-bottom" to="#">
+              <NavLink className="nav-link text-black py-lg-0 py-4 border-bottom" to="book-court">
                 Book a Court
               </NavLink>
             </NavItem>
@@ -76,7 +80,7 @@ export default function Header({}: Props) {
         </Collapse>
       </Navbar>
 
-      {modal && <LoginOrRegiserModal modal={modal} toggleModal={toggleModal} />}
+      <LoginOrRegiserModal modal={modal} toggleModal={toggleModal} />
     </>
   );
 }

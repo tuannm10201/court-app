@@ -1,5 +1,8 @@
 footer {
   margin-top: 5rem;
+  @include max-width($sm) {
+    margin-top: 2rem;
+  }
   background-color: $gray;
 
   hr {

@@ -1,0 +1,29 @@
+.home-filter {
+  .react-datepicker-popper {
+    position: absolute !important;
+    top: 65px !important;
+    left: 0 !important;
+    transform: translate(0) !important;
+
+    @include min-width($xl) {
+      top: 72px !important;
+    }
+  }
+
+  @include min-width($sm) {
+    .location-input {
+      width: 300px;
+    }
+    .react-datepicker-wrapper {
+      width: 200px;
+    }
+  }
+  @include max-width($sm) {
+    .location-input {
+      flex: 3;
+    }
+    .react-datepicker-wrapper {
+      flex: 2;
+    }
+  }
+}

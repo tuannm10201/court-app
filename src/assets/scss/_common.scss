@@ -7,9 +7,6 @@ body {
   overflow-x: hidden;
   height: 100vh;
 }
-#root {
-  height: 100%;
-}
 .container {
   @include min-width($xxl) {
     max-width: calc(1352px + var(--bs-gutter-x));

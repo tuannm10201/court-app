@@ -2,14 +2,29 @@ import { Badge, Button, Card, CardBody, CardText, CardTitle } from 'reactstrap';
 
 type Props = {
   img: string;
-  badgeName: string;
-  badgeIcon: string;
+  badgeName?: string;
+  badgeIcon?: string;
   name: string;
+  distanceBadge?: boolean;
+  distance?: number;
+  className?: string;
 };
 
-export default function HotDealCard({ img, badgeName, badgeIcon, name }: Props) {
+export default function HotDealCard({
+  img,
+  badgeName,
+  badgeIcon,
+  name,
+  distance = 2.5,
+  distanceBadge,
+  className,
+}: Props) {
   return (
-    <Card className="hot-deal-card h-100 position-relative rounded-24">
+    <Card
+      className={
+        'hot-deal-card h-100 position-relative rounded-24' + (className ? ` ${className}` : '')
+      }
+    >
       <div className="hot-deal-card-img p-xl-3 p-0 pb-2 overflow-hidden position-relative">
         <img src={img} alt="hot-deal-card" className="rounded-4" />
         <Badge
@@ -19,16 +34,26 @@ export default function HotDealCard({ img, badgeName, badgeIcon, name }: Props) 
           <i className="bi bi-star-fill star-icon me-1" /> 4.0
         </Badge>
         <Badge className="name-badge rounded-pill position-absolute text-white fs-6 fw-normal d-flex align-items-center gap-2">
-          <img src={badgeIcon} alt={badgeName} /> {badgeName}
+          {distanceBadge ? (
+            <>
+              <i className="bi bi-geo-alt" /> {distance} miles away
+            </>
+          ) : (
+            <>
+              <img src={badgeIcon} alt={badgeName} /> {badgeName}
+            </>
+          )}
         </Badge>
       </div>
       <CardBody className="p-3 d-flex flex-column">
         <CardTitle tag="h5" className="fw-semibold">
           {name}
         </CardTitle>
-        <CardText className="color-green fw-semibold">
-          <i className="bi bi-geo-alt" /> 2.5 miles away
-        </CardText>
+        {!distanceBadge && (
+          <CardText className="color-green fw-semibold">
+            <i className="bi bi-geo-alt" /> {distance} miles away
+          </CardText>
+        )}
 
         <div className="mt-3 d-flex gap-2">
           <div className="shadow-sm w-100 overflow-hidden text-center rounded-12 fw-semibold">

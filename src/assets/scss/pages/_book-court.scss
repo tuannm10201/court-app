@@ -1,0 +1,31 @@
+.boook-court-filter {
+  @include max-width($xl) {
+    max-height: calc(100vh - 10rem);
+    overflow: auto;
+  }
+}
+.book-court-filter-btn {
+  padding: 12px 24px;
+}
+
+.switch-input {
+  width: 44px !important;
+  height: 24px;
+
+  &:checked {
+    background-color: $green !important;
+    border-color: $green !important;
+  }
+}
+
+.book-court-search-bar {
+  padding: 5px 1rem;
+}
+
+.close-left .btn-close {
+  margin-left: 0;
+}
+
+.book-court-sm-btn-container {
+  margin-left: -1rem;
+}

@@ -54,3 +54,26 @@
     color: $text-color;
   }
 }
+
+// bottom sheet
+.vaul-drawer {
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+  max-height: 97%;
+  z-index: 400;
+  box-shadow: 8px 4px 24px 0px rgba(17, 17, 17, 0.15);
+
+  .vaul-title {
+    height: 14px;
+
+    .gray-bar {
+      width: 52px;
+      height: 5px;
+      background-color: $light-gray;
+    }
+  }
+}
+
+.selected-card-in-map {
+  top: calc(100% - 430px) !important;
+}
